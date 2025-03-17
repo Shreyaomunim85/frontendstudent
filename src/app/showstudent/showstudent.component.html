@@ -1,0 +1,11 @@
+<ul>
+    @for(student of studentdata; track student.id){
+        <li><b>Student ID</b>{{student.id}}</li>
+
+        <li><b>Student Name</b>{{student.name}}</li>
+
+        <li><b>Student course</b>{{student.course}}</li>
+        <button (click)="deletestudent(student.id)">Delete</button>
+        <br><br>
+    }
+</ul>

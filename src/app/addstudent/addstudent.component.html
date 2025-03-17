@@ -1,0 +1,20 @@
+<p>Welcome to student page</p>
+<h1>Create Student</h1>
+<div id="formdiv">
+    <form #studentForm="ngForm" (ngSubmit)="addstudent(studentForm.value)">
+    <label for="">Enter student Name</label><br>
+    <input type="text"  name="name" ngModel><br>
+
+    <br>
+    <label for="">Enter email </label><br>
+    <input type="text" ngModel name="email">
+    <br>
+
+    <label for="">Enter course Name</label><br>
+    <input type="text" ngModel name="course">
+    <br>
+
+
+    <button id="submitbtn">Addstudent</button>
+    </form>
+</div>
