@@ -1,11 +1,27 @@
+<div id="updateform">
+    <form #formupdate="ngForm" (ngSubmit)="updateStudent(studData.id, formupdate.value)">
+        <input type="text" placeholder="Student Name" [(ngModel)]="studData.name" name="name"><br>
+        <input type="text" placeholder="Student Email" [(ngModel)]="studData.email" name="email"> <br>
+        <input type="text" placeholder="Student Course" [(ngModel)]="studData.course" name="course"><br>
+        <button>Update Student</button>
+    </form>
+</div>
+
+
 <ul>
-    @for(student of studentdata; track student.id){
-        <li><b>Student ID</b>{{student.id}}</li>
-
-        <li><b>Student Name</b>{{student.name}}</li>
-
-        <li><b>Student course</b>{{student.course}}</li>
-        <button (click)="deletestudent(student.id)">Delete</button>
-        <br><br>
-    }
+    <ul>
+        @for(student of studentdata; track student.id){
+            <li><b>Student ID:</b> {{student.id}}</li>
+            <li><b>Student Name:</b> {{student.name}}</li>
+            <li><b>Student Email:</b> {{student.email}}</li>
+            <li><b>Student Course:</b> {{student.course}}</li>
+            
+            <button class="delete-btn" (click)="deletestudent(student.id)">Delete</button>
+            <br>
+            
+            <button class="update-btn" (click)="selectStudent(student.id)">Edit student</button>
+            <br><br>
+        }
+    </ul>
+    
 </ul>

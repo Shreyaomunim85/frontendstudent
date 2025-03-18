@@ -1,0 +1,72 @@
+/* Style for all delete buttons */
+.delete-btn {
+    background-color: #e63946;  /* Bright Red */
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.1s;
+}
+
+/* Hover effect */
+.delete-btn:hover {
+    background-color: #c53030; /* Darker Red */
+    transform: scale(1.05);
+}
+
+/* Style for Update Button */
+.update-btn {
+    background-color: #457b9d;  /* Deep Blue */
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.1s;
+}
+
+.update-btn:hover {
+    background-color: #35618d; /* Darker Blue */
+    transform: scale(1.05);
+}
+/* Update Form Container */
+#updateform {
+    width: 350px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Fields */
+#updateform input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Update Button */
+#updateform button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#updateform button:hover {
+    background-color: #0056b3;
+}

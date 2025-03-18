@@ -7,7 +7,6 @@ import { Observable } from 'rxjs';
 })
 export class StudentserviceService {
   private apiUrl = 'http://127.0.0.1:8000/api/students';
-
   constructor(private http:HttpClient) { }
 
   addstudent(data:any)
@@ -34,9 +33,15 @@ export class StudentserviceService {
   // updateStudent(id: number, data: any){
   //   return this.http.post("http://127.0.0.1:8000/api/update/1",data);
  // }
- updateStudent(id: number, studentData: any): Observable<any> {
-  return this.http.put(`http://127.0.0.1:8000/api/students/${id}`, studentData);
-}
+//  updateStudent(id: number, data: any): Observable<any> {
+//   return this.http.put(`http://127.0.0.1:8000/api/students/${id}`,data);
+// }
 
-  
+  getOneStudent(id:any){
+    return this.http.get("http://127.0.0.1:8000/api/show/"+id);
+  }
+
+  updateStudent(id:any,data:any){
+    return this.http.put("http://127.0.0.1:8000/api/update/"+id,data);
+  }
 }
